@@ -155,6 +155,10 @@ LLVMPY_ABIAlignmentOfElementType(LLVMTargetDataRef TD, LLVMValueRef Val) {
     return -1;
 
   llvm::Type* TP = GV->getValueType();
+
+  if (!TP)
+    return -1;
+
   if (!TP->isPointerTy()) {
     llvm::PointerType* PT = llvm::PointerType::getUnqual(TP);
     if (!PT)
