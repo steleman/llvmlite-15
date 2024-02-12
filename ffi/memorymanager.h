@@ -34,10 +34,10 @@ class __attribute__((visibility("default"))) ErrorInfoBase;
 #endif
 
 #include "core.h"
-#include "llvm/ADT/SmallVector.h"
-#include "llvm/ExecutionEngine/RTDyldMemoryManager.h"
-#include "llvm/Support/Alignment.h"
-#include "llvm/Support/Memory.h"
+#include <llvm/ADT/SmallVector.h>
+#include <llvm/ExecutionEngine/RTDyldMemoryManager.h>
+#include <llvm/Support/Alignment.h>
+#include <llvm/Support/Memory.h>
 #include <cstdint>
 #include <string>
 #include <system_error>

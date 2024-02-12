@@ -1,8 +1,8 @@
-#include "llvm/IR/Module.h"
+#include <llvm/IR/Module.h>
 #include "core.h"
-#include "llvm-c/Analysis.h"
-#include "llvm-c/Core.h"
-#include "llvm/IR/TypeFinder.h"
+#include <llvm-c/Analysis.h>
+#include <llvm-c/Core.h>
+#include <llvm/IR/TypeFinder.h>
 #include <clocale>
 #include <string>
 

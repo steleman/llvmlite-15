@@ -1,16 +1,16 @@
 #include "core.h"
 #include "memorymanager.h"
 
-#include "llvm-c/ExecutionEngine.h"
-#include "llvm-c/Object.h"
+#include <llvm-c/ExecutionEngine.h>
+#include <llvm-c/Object.h>
 
-#include "llvm/ExecutionEngine/ExecutionEngine.h"
-#include "llvm/ExecutionEngine/JITEventListener.h"
-#include "llvm/ExecutionEngine/ObjectCache.h"
-#include "llvm/IR/Module.h"
-#include "llvm/Object/Binary.h"
-#include "llvm/Object/ObjectFile.h"
-#include "llvm/Support/Memory.h"
+#include <llvm/ExecutionEngine/ExecutionEngine.h>
+#include <llvm/ExecutionEngine/JITEventListener.h>
+#include <llvm/ExecutionEngine/ObjectCache.h>
+#include <llvm/IR/Module.h>
+#include <llvm/Object/Binary.h>
+#include <llvm/Object/ObjectFile.h>
+#include <llvm/Support/Memory.h>
 
 #include <cstdio>
 #include <memory>

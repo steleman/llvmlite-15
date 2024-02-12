@@ -12,8 +12,8 @@
 //===----------------------------------------------------------------------===//
 
 #include "memorymanager.h"
-#include "llvm/Support/MathExtras.h"
-#include "llvm/Support/Process.h"
+#include <llvm/Support/MathExtras.h>
+#include <llvm/Support/Process.h>
 
 #define DEBUG_TYPE "llvmlite-memory-manager"
 

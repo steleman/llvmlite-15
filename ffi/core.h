@@ -1,7 +1,7 @@
 #ifndef LLVMPY_CORE_H_
 #define LLVMPY_CORE_H_
 
-#include "llvm-c/Core.h"
+#include <llvm-c/Core.h>
 #include <cstdlib>
 #include <cstring>
 #include <cstdint>

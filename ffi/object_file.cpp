@@ -1,9 +1,9 @@
 #include "core.h"
 
-#include "llvm-c/ExecutionEngine.h"
-#include "llvm-c/Object.h"
+#include <llvm-c/ExecutionEngine.h>
+#include <llvm-c/Object.h>
 
-#include "llvm/Object/ObjectFile.h"
+#include <llvm/Object/ObjectFile.h>
 
 #include <stdio.h>
 

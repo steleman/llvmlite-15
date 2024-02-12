@@ -1,6 +1,6 @@
 #include "core.h"
-#include "llvm/ADT/StringRef.h"
-#include "llvm/Support/DynamicLibrary.h"
+#include <llvm/ADT/StringRef.h>
+#include <llvm/Support/DynamicLibrary.h>
 
 extern "C" {
 

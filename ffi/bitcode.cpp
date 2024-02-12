@@ -1,5 +1,5 @@
-#include "llvm-c/BitReader.h"
-#include "llvm-c/BitWriter.h"
+#include <llvm-c/BitReader.h>
+#include <llvm-c/BitWriter.h>
 
 #include "core.h"
 

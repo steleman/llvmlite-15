@@ -1,9 +1,9 @@
-#include "llvm-c/Core.h"
-#include "llvm-c/Initialization.h"
-#include "llvm-c/Target.h"
+#include <llvm-c/Core.h>
+#include <llvm-c/Initialization.h>
+#include <llvm-c/Target.h>
 
 #include "core.h"
-#include "llvm/Config/llvm-config.h"
+#include <llvm/Config/llvm-config.h>
 
 extern "C" {
 

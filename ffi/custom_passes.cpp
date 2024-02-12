@@ -1,21 +1,20 @@
-
 #include "core.h"
 
-#include "llvm/IR/BasicBlock.h"
-#include "llvm/IR/Function.h"
-#include "llvm/IR/Instructions.h"
-#include "llvm/Pass.h"
+#include <llvm/IR/BasicBlock.h>
+#include <llvm/IR/Function.h>
+#include <llvm/IR/Instructions.h>
+#include <llvm/Pass.h>
 
-#include "llvm/ADT/SmallSet.h"
+#include <llvm/ADT/SmallSet.h>
 
-#include "llvm/Analysis/Passes.h"
-#include "llvm/Analysis/PostDominators.h"
-#include "llvm/Support/raw_ostream.h"
+#include <llvm/Analysis/Passes.h>
+#include <llvm/Analysis/PostDominators.h>
+#include <llvm/Support/raw_ostream.h>
 
-#include "llvm/IR/LegacyPassManager.h"
+#include <llvm/IR/LegacyPassManager.h>
 
-#include "llvm/InitializePasses.h"
-#include "llvm/LinkAllPasses.h"
+#include <llvm/InitializePasses.h>
+#include <llvm/LinkAllPasses.h>
 
 #include <iostream>
 #include <vector>
