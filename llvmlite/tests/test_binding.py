@@ -969,16 +969,15 @@ class JITTestMixin(object):
         for g in (gv_i32, gv_i8, gv_struct):
             self.assertEqual(td.get_abi_size(g.type), pointer_size)
 
-        if llvm.context.get_global_context().supports_typed_pointers():
-            with self.subTest('pointee_types'):
-                self.assertEqual(td.get_pointee_abi_size(gv_i32), 4)
-                self.assertEqual(td.get_pointee_abi_alignment(gv_i32), 4)
+        with self.subTest('pointee_types'):
+            self.assertEqual(td.get_pointee_abi_size(gv_i32), 4)
+            self.assertEqual(td.get_pointee_abi_alignment(gv_i32), 4)
 
-                self.assertEqual(td.get_pointee_abi_size(gv_i8), 1)
-                self.assertIn(td.get_pointee_abi_alignment(gv_i8), (1, 2, 4))
+            self.assertEqual(td.get_pointee_abi_size(gv_i8), 1)
+            self.assertIn(td.get_pointee_abi_alignment(gv_i8), (1, 2, 4))
 
-                self.assertEqual(td.get_pointee_abi_size(gv_struct), 24)
-                self.assertIn(td.get_pointee_abi_alignment(gv_struct), (4, 8))
+            self.assertEqual(td.get_pointee_abi_size(gv_struct), 24)
+            self.assertIn(td.get_pointee_abi_alignment(gv_struct), (4, 8))
 
         with self.subTest('global_value_types'):
             self.assertEqual(td.get_abi_size(gv_i32.global_value_type), 4)
@@ -1361,9 +1360,6 @@ class TestTargetData(BaseTest):
         self.assertIsNotNone(glob.global_value_type)
         self.assertEqual(td.get_abi_size(glob.global_value_type), 24)
 
-    @unittest.skipUnless(
-        llvm.context.get_global_context().supports_typed_pointers(),
-        "No typed pointer support")
     def test_get_pointee_abi_size(self):
         td = self.target_data()
 

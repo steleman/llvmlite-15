@@ -137,7 +137,7 @@ class TargetData(ffi.ObjectRef):
 
     def get_abi_alignment(self, ty):
         """
-        Get ABI size of LLVM type *ty*.
+        Get ABI alignment of LLVM type *ty*.
         """
         return ffi.lib.LLVMPY_ABIAlignmentOfType(self, ty)
 
@@ -157,6 +157,7 @@ class TargetData(ffi.ObjectRef):
         """
         Get ABI size of pointee type of LLVM pointer type *ty*.
         """
+
         size = ffi.lib.LLVMPY_ABISizeOfElementType(self, ty)
         if size == -1:
             raise RuntimeError("Not a pointer type: %s" % (ty,))
@@ -166,6 +167,7 @@ class TargetData(ffi.ObjectRef):
         """
         Get minimum ABI alignment of pointee type of LLVM pointer type *ty*.
         """
+
         size = ffi.lib.LLVMPY_ABIAlignmentOfElementType(self, ty)
         if size == -1:
             raise RuntimeError("Not a pointer type: %s" % (ty,))
